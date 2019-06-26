@@ -1,0 +1,34 @@
+<DOCTYPE! html>
+<html> 
+<head>
+<title> Stock Price charting program</title>
+</head>
+<body>	
+	<h1>Stock Price Chart</h1>	
+	<h3>This program produces a bar chart for stock prices</h3>	
+	<script>
+		
+	num_days = parseInt(prompt("Enter numbers of days for which prices are available"));
+	var prices = new Array(num_days);
+	
+	var i;		
+	for (i=0; i <prices.length; i=i+1) {
+		prices[i] = prompt("Enter stock price");
+		document.write(prices[i] + " ");
+	}
+	document.write("<br>");
+	 
+	var day, star;
+	 
+	for (day=0;day<prices.length;day=day+1) {
+		var num_day = day+1;
+		document.write("Day "+num_day+": "); 
+		for (star=0;star<Math.round(prices[day]);star=star+1) {
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+	</script>
+	
+</body>
+</html>

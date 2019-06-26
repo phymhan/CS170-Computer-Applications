@@ -1,0 +1,27 @@
+<DOCTYPE! html>
+<html> 
+<head>
+<title> Interest Rate Calculation function</title>
+</head>
+<body>		
+	<script>
+	function intRate(c,t,r,n) {
+		var c; //amount deposited
+		var t; //number of years deposited
+		var r; //annual interest rate
+		var n; //number of payments per year		
+		var totalDep; //total amount accumulated after interest paid
+		totalDep = Math.round(c*(Math.pow((1+(r/n)),n*t)));		
+		return totalDep;
+	}
+	
+	var origAmount = prompt("Enter the initial deposit");
+	var numYears = prompt("Enter the number of years to be deposited");
+	var annIntRate = prompt("Enter the annual interest rate");
+	var numPayYear = prompt("Enter the number of interest payments per year");
+	
+	document.write("The total amount accumulated: " + intRate(origAmount,numYears,annIntRate,numPayYear)); 
+	</script>
+	
+</body>
+</html>

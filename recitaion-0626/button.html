@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript in Body</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="foo()" id="button">Try it</button>
+
+<script>
+function foo() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+  document.getElementById("button").innerHTML = "Reset";
+  document.getElementById("button").onclick = bar;
+}
+function bar() {
+  document.getElementById("demo").innerHTML = "A Paragraph.";
+  document.getElementById("button").innerHTML = "Try it";
+  document.getElementById("button").onclick = foo;
+}
+</script>
+
+</body>
+</html>

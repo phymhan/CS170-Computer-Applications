@@ -1,0 +1,29 @@
+<DOCTYPE! html>
+<html> 
+<head>
+<title> Stock Price charting program</title>
+</head>
+<body>		
+	<h3>This program produces a 5 day bar chart for stock prices</h3>	
+	<script>
+	var i,j;
+	var price = new Array(5);
+			
+	for (i=0; i <price.length; i=i+1) {
+		price[i] = prompt("Enter stock price");
+		document.write(price[i] + " ");
+	}
+	document.write("<br>");
+	 
+	var j;
+	 
+	for (j=0;j<price.length;j=j+1) {
+		for (i=0;i<price[j];i=i+1) {
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+	</script>
+	
+</body>
+</html>
